@@ -1,0 +1,116 @@
+/* =========================
+   TECH STACK SECTION
+========================= */
+
+.tech-stack {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   GROUP TITLE
+========================= */
+
+.stack-group {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.stack-title {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+}
+
+/* =========================
+   GLASS CARD STYLE
+========================= */
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px 15px;
+  text-align: center;
+
+  border: 1px solid rgba(0, 255, 255, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+/* Hover animation */
+
+.tech-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow:
+    0 0 15px rgba(0, 255, 255, 0.6),
+    0 0 35px rgba(0, 191, 255, 0.4);
+}
+
+/* =========================
+   ICON STYLE
+========================= */
+
+.tech-card img {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 12px;
+
+  filter: drop-shadow(0 0 8px #00eaff);
+  transition: transform 0.3s ease;
+}
+
+.tech-card:hover img {
+  transform: rotate(8deg) scale(1.1);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.tech-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #d9ffff;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .tech-stack {
+    padding: 60px 15px;
+  }
+
+  .stack-title {
+    font-size: 1.6rem;
+  }
+
+  .tech-card {
+    padding: 20px 10px;
+  }
+
+  .tech-card img {
+    width: 55px;
+    height: 55px;
+  }
+}

@@ -1,19 +1,35 @@
-import Matrix from "./components/Matrix.jsx";
+import Navbar from "./components/Navbar";
+import Matrix from "./components/Matrix";
+import Profile from "./components/Profile";
+import TechStack from "./components/TechStack";
 
 function App() {
-return (
-<>
-{/* Background */} <Matrix />
+  return (
+    <>
+      <Matrix />
+      <Navbar />
 
-  {/* Temporary content */}
-  <div style={{ position: "relative", zIndex: 1, textAlign: "center", paddingTop: "100px" }}>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Matrix background working with React.</p>
-  </div>
-</>
+      <section id="home" className="section">
+        
+      </section>
 
+      <section id="profile" className="section">
+        <Profile/>
+      </section>
 
-);
+      <section id="stack" className="section">
+        <TechStack/>
+      </section>
+
+      <section id="projects" className="section">
+       
+      </section>
+
+      <section id="contact" className="section">
+        
+      </section>
+    </>
+  );
 }
 
 export default App;
