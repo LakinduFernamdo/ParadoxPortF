@@ -18,7 +18,7 @@ export default function Matrix() {
         window.addEventListener("resize", resizeCanvas);
 
         const chars =
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{}|;:,.<>?アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
 
         const charArray = chars.split("");
 
@@ -31,11 +31,11 @@ export default function Matrix() {
         }
 
         function draw() {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillStyle = "rgba(11, 2, 2, 0.05)";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             ctx.fillStyle = "#00BFFF";
-            ctx.shadowColor = "#2C7087";
+            ctx.shadowColor = "#0C1417";
             ctx.shadowBlur = 10;
             ctx.font = `${fontSize}px monospace`;
 
