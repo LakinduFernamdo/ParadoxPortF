@@ -28,7 +28,8 @@
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 30px;
+  margin-bottom: 0px;
+  gap: 40px;
   color: white;
 }
 

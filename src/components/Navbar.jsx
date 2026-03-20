@@ -37,9 +37,9 @@ export default function Navbar() {
         {/* Menu */}
         <ul className={`nav-menu ${open ? "show" : ""}`}>
           <li onClick={() => scrollToSection("profile")}>Profile</li>
-          <li onClick={() => scrollToSection("experience")}>Experience & Hands-On</li>
+          <li onClick={() => scrollToSection("experience")}>Experience</li>
           <li onClick={() => scrollToSection("stack")}>Tech Stack</li>
-          <li onClick={() => scrollToSection("projects")}>Projects</li>
+          <li onClick={() => scrollToSection("projects")}>Projects & Hands-On</li>
           <li onClick={() => scrollToSection("contact")}>Contact</li>
         </ul>
 
