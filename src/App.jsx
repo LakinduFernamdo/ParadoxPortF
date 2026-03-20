@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Matrix from "./components/Matrix";
 import Profile from "./components/Profile";
 import TechStack from "./components/TechStack";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
 
       <section id="profile" className="section">
         <Profile/>
+      </section>
+
+      <section id="experience" className="section">
+        <Experience/>
       </section>
 
       <section id="stack" className="section">
