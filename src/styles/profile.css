@@ -1,72 +1,127 @@
+/*
+   PROFILE LAYOUT*/
+
 .profile-wrapper {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
-  margin-top: 100px;
-  margin-left: 0px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-
-  /* Glass effect */
- 
-
-  color: white;
+  gap: 100px;
+  min-height: 90vh;
+  padding: 40px 20px;
+  flex-wrap: wrap;
 }
 
-/* LEFT SIDE IMAGE */
-.profile-left {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
+/* LEFT IMAGE */
 
 .profile-left img {
-  width: 260px;
+   width: 260px;
   height: 260px;
   object-fit: cover;
+  
   border-radius: 50%;
   border: 2px solid #00BFFF;
   box-shadow: 0 0 25px #00BFFF55;
 }
 
-/* RIGHT SIDE TEXT */
+/* RIGHT CONTENT */
+
 .profile-right {
-  flex: 2;
+  max-width: 550px;
 }
 
 .title {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px #00BFFF;
+  font-size: 2.8rem;
+  color: white;
 }
 
 .subtitle {
-  color: #00BFFF;
-  margin-bottom: 20px;
-  font-weight: 500;
+  color: #00eaff;
+  margin-bottom: 15px;
 }
 
 .description {
-  font-size: 1.2rem;
+  color: #cceeee;
   line-height: 1.6;
-  color: rgb(200, 230, 230);
+  margin-bottom: 30px;
 }
 
-/* MOBILE RESPONSIVE */
+
+   /*TERMINAL STYLE*/
+
+
+.terminal {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+}
+
+/* terminal top bar */
+
+.terminal-header {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(20, 20, 20, 0.9);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+/* terminal body */
+
+.terminal-body {
+  padding: 18px;
+  font-family: "Courier New", monospace;
+  color: #00eaff;
+  font-size: 1.1rem;
+  min-height: 60px;
+}
+
+.prompt {
+  color: #00ffaa;
+}
+
+/* blinking cursor */
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background: #00eaff;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
 @media (max-width: 768px) {
   .profile-wrapper {
     flex-direction: column;
     text-align: center;
   }
 
-  .profile-right {
-    flex: unset;
+  .profile-left img {
+    width: 220px;
   }
 
-  .profile-left img {
-    width: 200px;
-    height: 200px;
+  .title {
+    font-size: 2rem;
   }
 }
