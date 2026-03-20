@@ -12,6 +12,12 @@
   z-index: 1;
 }
 
+.handsonItems{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+}
+
 /* =========================
    GROUP TITLE
 ========================= */

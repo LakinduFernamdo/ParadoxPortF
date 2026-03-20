@@ -1,0 +1,124 @@
+.projects-section {
+  padding: 80px 10%;
+  min-height: 100vh;
+  color: white;
+}
+
+.projects-title {
+  text-align: center;
+   color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+  font-size: 3rem;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+/* ===== Grid ===== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* ===== Card ===== */
+
+.project-card {
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  transition: 0.35s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+/* Image */
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Content */
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h2 {
+  margin: 0;
+  color: #38bdf8;
+}
+
+.tech {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 8px 0;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Link */
+
+.project-content a {
+  text-decoration: none;
+  color: #38bdf8;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.project-content a:hover {
+  letter-spacing: 1px;
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 2.2rem;
+  }
+}
+/* ===== Hands-On Section ===== */
+
+/* ===== Hands-on Card ===== */
+
+.handson-card {
+  background: rgba(30, 41, 59, 0.7);
+  padding: 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.handson-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+/* ICON */
+
+.handson-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.6));
+}
+
+/* Description */
+
+.handson-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
