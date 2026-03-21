@@ -1,0 +1,151 @@
+/* =========================
+   SECTION
+========================= */
+
+.education-section {
+  padding: 100px 8%;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+  margin-top: 200px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.education-title {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: #00eaff;
+  text-shadow: 0 0 12px rgba(0, 234, 255, 0.7);
+}
+
+/* =========================
+   TIMELINE CONTAINER
+========================= */
+
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin-left: 10px;
+}
+
+/* vertical glowing line */
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #00eaff,
+    transparent
+  );
+  box-shadow: 0 0 10px #00eaff;
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.timeline-item {
+  position: relative;
+  justify-content: left;
+
+  margin-bottom: 70px;
+  padding-left: 60px;
+}
+
+/* glowing dot */
+
+.timeline-dot {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  width: 16px;
+  height: 16px;
+  background: #00eaff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 10px #00eaff,
+    0 0 20px #00eaff;
+}
+
+/* =========================
+   CONTENT CARD
+========================= */
+
+.timeline-content {
+  background: rgba(20, 25, 35, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 22px 28px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 234, 255, 0.25);
+
+  transition: all 0.35s ease;
+}
+
+/* hover cyber glow */
+
+.timeline-content:hover {
+  transform: translateX(8px);
+  box-shadow:
+    0 0 20px rgba(0, 234, 255, 0.6),
+    0 0 40px rgba(0, 191, 255, 0.3);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.timeline-content h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #00eaff;
+}
+
+.timeline-content h3 {
+  margin: 6px 0;
+  font-weight: 400;
+  color: #e6ffff;
+}
+
+.timeline-content p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 80px 20px;
+  }
+
+  .education-title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .timeline {
+    margin: auto;
+  }
+
+  .timeline-item {
+    padding-left: 55px;
+  }
+
+  .timeline-content {
+    width: 100%;
+  }
+}
