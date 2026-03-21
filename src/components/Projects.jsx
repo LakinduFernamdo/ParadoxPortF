@@ -34,6 +34,18 @@ function Projects() {
             icon: "https://yt3.googleusercontent.com/_pHLjGmYVp9Qv6r57IhDnEsej2tgpxSyBzD8kUUvDetLLPLGSkDlh77JLxtchccZhBwG8iqq=s900-c-k-c0x00ffffff-no-rj",
             description: "Configured AWS pentesting environment using Kali Linux.",
         },
+        {
+            icon: "https://media.cdn.kaufland.de/product-images/400x400/03cbda47be197e31c3137ba3689a8c16.webp",
+            description: "Wifi Penetration Testing",
+        },
+         {
+            icon: "https://www.avg.com/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Keyloggers%20What%20They%20Are/What_is_a_Keylogger-Thumb.jpg",
+            description: "KeyLoggers and Backdoor Programming",
+        },
+        {
+            icon: "https://wallpaperaccess.com/full/12235745.jpg",
+            description: "OSINT",
+        },
     ];
 
 
@@ -41,7 +53,7 @@ function Projects() {
         <section id="projects" className="projects-section">
 
             {/* ===== Projects ===== */}
-            <h1 className="projects-title">Projects</h1>
+            <h1 className="projects-title">Projects & Hands-On</h1>
 
             <div className="projects-grid">
                 {projects.map((project, index) => (
@@ -58,8 +70,7 @@ function Projects() {
                 ))}
             </div>
 
-            {/* ===== Hands-On Section ===== */}
-            <h1 className="handson-title">Hands-On Experience</h1>
+            
 
             <div className="handsonItems">
                 {handsonItems.map((item, index) => (
