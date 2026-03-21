@@ -98,6 +98,7 @@
   border-radius: 12px;
   backdrop-filter: blur(6px);
   text-align: center;
+  margin-top: 100px;
   transition: 0.3s;
 }
 

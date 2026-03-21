@@ -1,13 +1,12 @@
-/*
-   PROFILE LAYOUT*/
 
 .profile-wrapper {
   display: flex;
   align-items: center;
   gap: 100px;
-  min-height: 90vh;
+  min-height: 70vh;
   padding: 40px 20px;
   flex-wrap: wrap;
+  margin-bottom:-100px ;
 }
 
 /* LEFT IMAGE */
