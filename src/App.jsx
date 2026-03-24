@@ -5,6 +5,8 @@ import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
+import Contact from "./components/Contact";
+
 function App() {
   return (
     <>
@@ -33,7 +35,7 @@ function App() {
       </section>
 
       <section id="contact" className="section">
-        
+        <Contact/>
       </section>
     </>
   );
