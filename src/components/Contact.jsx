@@ -1,21 +1,51 @@
 // src/components/Contact.jsx
-
-import React from "react";
+import React, { useState } from "react";
 import "../styles/contact.css";
 
-import { AiFillGithub, AiFillLinkedin, AiFillSound } from "react-icons/ai";
+import axios from "axios";
+import { AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import confetti from "canvas-confetti";
 
 function Contact() {
+  const [form, setForm] = useState({
+    fullname: "",
+    email: "",
+    message: ""
+  });
 
-  const handleCelebrate = (e) => {
-    e.preventDefault(); // prevent page reload
-
-    confetti({
-      particleCount: 150,
-      spread: 70,
-      origin: { y: 0.6 },
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
     });
+  };
+
+  const sendMyEmail = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Call backend API
+      await axios.post("http://localhost:5000/api/contact", form);
+
+      // Confetti celebration
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+      alert("Message sent successfully ✅");
+
+      // Clear form
+      setForm({
+        fullname: "",
+        email: "",
+        message: ""
+      });
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send message ❌");
+    }
   };
 
   return (
@@ -26,31 +56,37 @@ function Contact() {
       <div className="contact-container">
 
         {/* ===== LEFT : FORM ===== */}
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={sendMyEmail}>
 
           <input
             type="text"
+            name="fullname"
             placeholder="Full Name"
+            value={form.fullname}
+            onChange={handleChange}
             required
           />
 
           <input
             type="email"
+            name="email"
             placeholder="Email Address"
+            value={form.email}
+            onChange={handleChange}
             required
           />
 
           <textarea
+            name="message"
             rows="5"
             placeholder="Your Message..."
+            value={form.message}
+            onChange={handleChange}
             required
           />
 
-          <button
-            className="send-btn"
-            onClick={handleCelebrate}
-          >
-            <AiFillSound className="btn-icon" />
+          <button className="send-btn" type="submit">
+         
             Send Message
           </button>
 
