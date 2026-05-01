@@ -31,12 +31,25 @@ const tools = [
     img: "https://preview.redd.it/custom-wireshark-icon-because-the-current-one-is-very-bad-v0-dxk87rvwzjmc1.png?auto=webp&s=29952f19fdeb8c85493bdb04265988057bd54e0b",
   },
   {
-    name: "Jhon the ripper",
+    name: "Jhon the Ripper",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQciD3f2-0VPPTw9NUMShnIAc4eCETtAOmIwg&s",
   },
   {
     name: "Metasploit",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTINUizi44XOMcudPSNTii4W2jHLn_DjnI2UQ&s",
+  },
+  {
+    name: "BurpSuite",
+    img: "https://tryhackme-images.s3.amazonaws.com/room-icons/fe6673d2115ceddf7f8070e793f1d4cb.png",
+  },
+   {
+    name: "Hidra",
+    img: "https://content.pentest-tools.com/assets/content/password-auditor-vs-hydra/hydra-logo.png",
+  },
+  
+  {
+    name: "Elastic Search",
+    img: "https://avatars.githubusercontent.com/u/6764390?v=4",
   },
   {
     name: "Aircrack-ng",
