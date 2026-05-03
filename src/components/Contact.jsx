@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "../styles/contact.css";
 
 import axios from "axios";
-import { AiFillGithub, AiFillLinkedin} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import confetti from "canvas-confetti";
 
 function Contact() {
@@ -24,8 +24,12 @@ function Contact() {
     e.preventDefault();
 
     try {
-      // Call backend API
-      await axios.post("http://localhost:5000/api/contact", form);
+      // Call backend API vercel
+      await axios.post("/api/mail", form, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       // Confetti celebration
       confetti({
@@ -86,7 +90,7 @@ function Contact() {
           />
 
           <button className="send-btn" type="submit">
-         
+
             Send Message
           </button>
 
