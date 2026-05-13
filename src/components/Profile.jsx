@@ -3,11 +3,11 @@ import "../styles/profile.css";
 import profileImg from "../assets/profile.jpg";
 
 const titles = [
-  "Cloud Computing",
-  "Networking",
   "Cloud Security",
-  "Network Programming",
-  "Cloud-based Pentesting",
+  "Networking",
+  "Ethical Hacking",
+  "Digital Forensics",
+  "SOC Analysis",
 ];
 
 function Profile() {

@@ -52,6 +52,14 @@ const tools = [
     img: "https://avatars.githubusercontent.com/u/6764390?v=4",
   },
   {
+    name: "SQLMAP",
+    img: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Sqlmap_logo.png",
+  },
+  {
+    name: "Nessus",
+    img: "https://miro.medium.com/0*GvdgQGcIns2KjF_U.png",
+  },
+  {
     name: "Aircrack-ng",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkgyz_Rt-LxDHjhX3xDreGk6_4teHSag0_3w&s",
   },
