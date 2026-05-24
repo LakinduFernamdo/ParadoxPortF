@@ -4,6 +4,7 @@ import "../styles/contact.css";
 
 import axios from "axios";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import DOMPurify from "dompurify";
 import confetti from "canvas-confetti";
 
 function Contact() {
@@ -14,16 +15,35 @@ function Contact() {
   });
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value
-    });
-  };
+  const { name, value } = e.target;
+
+  // Sanitize using DOMPurify
+  let sanitizedValue = DOMPurify.sanitize(value);
+
+  if (name === "fullname") {
+    sanitizedValue = sanitizedValue.replace(/[^a-zA-Z\s]/g, "");
+    sanitizedValue = sanitizedValue.slice(0, 20);
+  }
+
+  if (name === "email") {
+    sanitizedValue = sanitizedValue.trim().slice(0, 25);
+  }
+
+  if (name === "message") {
+    sanitizedValue = sanitizedValue.slice(0, 100);
+  }
+
+  setForm((prev) => ({
+    ...prev,
+    [name]: sanitizedValue,
+  }));
+};
 
   const sendMyEmail = async (e) => {
     e.preventDefault();
 
     try {
+
       // Call backend API vercel
       await axios.post("/api/mail", form, {
         headers: {
@@ -67,6 +87,7 @@ function Contact() {
             name="fullname"
             placeholder="Full Name"
             value={form.fullname}
+             maxLength={20}
             onChange={handleChange}
             required
           />
@@ -83,9 +104,10 @@ function Contact() {
           <textarea
             name="message"
             rows="5"
-            placeholder="Your Message..."
+            placeholder="Your Message...(Max 100 words)"
             value={form.message}
             onChange={handleChange}
+            maxLength={100}
             required
           />
 
