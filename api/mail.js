@@ -8,6 +8,25 @@ export default async function handler(req, res) {
   try {
     const { fullname, email, message } = req.body;
 
+    if (!fullname || !email || !message) {
+      return res.status(400).json({ message: "All fields required" });
+
+    }
+
+    if (fullname.length > 20 || message.length > 100)
+     {
+      return res.status(400).json({
+        message: "Input too long"
+      });
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+       if (!emailRegex.test(email)) {
+      return res.status(400).json({
+        message: "Invalid email"
+      });
+    }
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -17,9 +36,9 @@ export default async function handler(req, res) {
     });
 
     await transporter.sendMail({
-      from: email,
+      from:process.env.HOST_EMAIL ,
       to: process.env.HOST_EMAIL,
-      subject: `Portfolio Message from ${fullname}`,
+      subject: `Portfolio Message from ${fullname}  (${email})`,
       text: message,
     });
 
